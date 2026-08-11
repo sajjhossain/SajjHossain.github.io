@@ -33,7 +33,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col selection:bg-blue-500/30 text-gray-900 bg-[#f8f9fa] dark:bg-[#0a0a0a] dark:text-gray-100">
+      <body className="min-h-full flex flex-col selection:bg-blue-500/30 text-[#17233a] bg-white dark:bg-[#0a0a0a] dark:text-gray-100">
         <ThemeProvider>
           <CustomCursor />
           <FloatingBackground />

@@ -20,7 +20,7 @@ export default function Links() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-3xl md:text-5xl font-bold mb-16 tracking-tight text-center"
         >
-          Publications & Profiles<span className="text-blue-500">.</span>
+          Professional Profiles<span className="text-[#188b89]">.</span>
         </motion.h2>
 
         <div className="flex flex-wrap justify-center gap-6">

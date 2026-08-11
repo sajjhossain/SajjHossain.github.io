@@ -1,7 +1,7 @@
 export interface ContactInfo {
   location: string;
-  phone: string;
   email: string;
+  personalEmail: string;
   linkedin: string;
   github: string;
   googleScholar: string;
@@ -12,20 +12,16 @@ export interface Education {
   degree: string;
   institution: string;
   period: string;
-  graduation?: string;
   details: string;
   courses?: string[];
   cgpa: string;
-  reportUrl?: string;
 }
 
 export interface Skills {
   languages: string[];
   frameworks: string[];
   machineLearning: string[];
-  networking: string[];
-  imaging: string[];
-  spatial: string[];
+  dataScience: string[];
   other: string[];
 }
 
@@ -38,219 +34,184 @@ export interface Experience {
 
 export interface Project {
   title: string;
+  subtitle: string;
   description: string;
-  image?: string;
   tags: string[];
-  githubUrl?: string;
-  liveUrl?: string;
+  videoUrl?: string;
+  videoExternalUrl?: string;
 }
 
-export interface Achievement {
-  text: string;
-  url?: string;
+export interface Publication {
+  title: string;
+  authors: string;
+  venue: string;
+  year: string;
+  url: string;
 }
 
-export interface ThemeConfig {
-  mode: "light" | "dark" | "system";
-  primaryColor: string;
-  secondaryColor: string;
-  fontFamily: string;
+export interface ResearchInterest {
+  title: string;
+  description: string;
 }
 
 export interface ResumeData {
-  theme: ThemeConfig;
   name: string;
   role: string;
   contact: ContactInfo;
   summary: string;
-  proposedEndeavor: string;
   education: Education[];
   skills: Skills;
   skillsDescription: string;
   experience: Experience[];
+  researchInterests: ResearchInterest[];
   projects: Project[];
-  achievements: Achievement[];
+  publications: Publication[];
+  underReview: Publication;
   resumeUrl: string;
   profileImage: string;
 }
 
 export const resumeData: ResumeData = {
-  theme: {
-    mode: "system", // default setting, allows toggle to 'light' or 'dark'
-    primaryColor: "#3b82f6", // Example: Tailwind blue-500
-    secondaryColor: "#10b981", // Example: Tailwind emerald-500
-    fontFamily: "var(--font-sans)",
-  },
-  name: "Rahul Debnath",
-  role: "I build AI-enabled geospatial and IoT systems.",
-  profileImage: "./images/profile.jpg",
-  resumeUrl: "./resume.pdf",
+  name: "MD SAJJAD HOSSAIN",
+  role: "I develop reliable AI and NLP methods for high-stakes systems.",
+  profileImage: "/images/profile-placeholder.svg",
+  resumeUrl: "/resume.pdf",
   contact: {
-    location: "Bryan, TX",
-    phone: "(979)-645-0705",
-    email: "rdebnath086@gmail.com",
-    linkedin: "linkedin.com/in/m3gam1n4",
-    github: "github.com/megam1n4",
-    googleScholar: "tinyurl.com/rahulgScholar",
-    researchGate: "tinyurl.com/rahulRGate",
+    location: "Houston, Texas, USA",
+    email: "mhossain2@pvamu.edu",
+    personalEmail: "sajjadhossain.aust@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sajjad-hossain1/",
+    github: "https://github.com/sajjhossain",
+    googleScholar: "https://scholar.google.com/citations?hl=en&user=1LjuQSQAAAAJ",
+    researchGate: "https://www.researchgate.net/profile/Md-Hossain-866",
   },
   summary:
-    "Master's student in Computer Science specializing in AI-enabled geospatial analytics and IoT systems for transportation infrastructure resilience. Research develops multi-source data fusion frameworks and ML models that integrate UAV photogrammetry, ERI subsurface profiling, ground RGB imagery, and satellite data to create early warning systems for landslides and automate soil condition classification (wet mud, saturated vegetation, dry gravel) along transportation corridors. Building on prior work engineering high-throughput Python backends, Bluetooth signal processing, and real-time UDP data services for border traffic systems, I employ computer vision (OpenCV), probabilistic data analysis, and Python workflows to link surface-subsurface conditions for enhanced embankment monitoring and geohazard prediction. My future research will advance intelligent transportation systems through real-time sensing, predictive ML modeling, and automated early warning detection to improve safety, efficiency, and resilience in national transportation networks.",
-  proposedEndeavor:
-    "Advance AI/IoT early warning systems for national transportation networks via post-OPT full-time engineering role at Texas A&M Transportation Institute.",
-  skillsDescription: "The core tools, languages, and frameworks I use to engineer scalable AI/IoT infrastructure and resilient data platforms.",
+    "I am an M.S. student in Computer Science at Prairie View A&M University. My research focuses on reliable and domain-adapted NLP for high-stakes applications, including transportation safety and healthcare. My work includes crash-narrative classification, annotation quality, privacy-conscious language models, and the development of a system for generating clinical SOAP notes. I am interested in building reliable AI systems that support safer and better-informed decision-making in complex real-world environments.",
+  skillsDescription:
+    "The languages, frameworks, methods, and tools I use for applied AI research and deployable machine-learning systems.",
   education: [
     {
-      degree: "M.Sc. in Computer Science",
+      degree: "M.S. in Computer Science",
       institution: "Prairie View A&M University",
-      period: "Jan. 2024 - Present",
-      graduation: "May 2026",
+      period: "Expected December 2026",
       details:
-        "Research Topic: Developing a Multi-Source Data Fusion for Integrated Surface and Subsurface Soil Characterization.",
-      courses: [
-        "Deep Learning",
-        "Advanced Computer Architecture",
-        "Advanced Database Management System",
-        "Information Retrieval",
-        "Advanced Software Engineering",
-      ],
+        "All coursework completed; thesis in progress. Working thesis: Design and Deployment of Reliable Domain-Adapted NLP for Crash Narrative Analysis: Multi-Label Classification, Annotation Auditing, and Analyst Decision Support.",
       cgpa: "4.00 / 4.00",
     },
     {
-      degree: "B.Sc. in Computer Science",
-      institution: "Daffodil International University",
-      period: "May 2014 - Apr. 2018",
+      degree: "B.Sc. in Industrial & Production Engineering",
+      institution: "Ahsanullah University of Science & Technology",
+      period: "2022",
       details:
-        "Project Topic: A gesture-controlled Smart Wheelchair developed using Arduino Uno R3, Embedded C, and IoT Sensors for enhanced mobility and safety.",
-      reportUrl: "http://tinyurl.com/2xzhpr9y",
-      courses: [
-        "Structured Programming",
-        "Data Structure",
-        "OOP",
-        "Algorithms",
-        "Computer Architecture",
-        "Database Management System",
-        "Artificial Intelligence",
-        "Data Mining",
-      ],
-      cgpa: "3.68 / 4.00",
+        "ECE evaluated. Relevant foundation in statistics, numerical analysis, operations research, and supply chain management.",
+      cgpa: "3.31 / 4.00",
     },
   ],
   skills: {
-    languages: ["C", "C++", "Java", "Dart", "Python (Backend)", "Python (ML)"],
-    frameworks: [
-      "Android Studio",
-      "Google Colab",
-      "Jupyter Notebook",
-      "Flutter",
-      "VS Code",
-    ],
+    languages: ["Python", "SQL", "JavaScript", "HTML", "MATLAB"],
+    frameworks: ["PyTorch", "TensorFlow / Keras", "Scikit-learn", "Hugging Face Transformers"],
     machineLearning: [
-      "TensorFlow",
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "SciKit-Learn",
-      "Keras",
-      "OpenCV",
+      "Multi-label Text Classification",
+      "Small Language Models (SML)",
+      "TextCNN",
+      "FastText",
+      "Human-in-the-Loop Pipelines",
+      "QLoRA",
+      "Supervised Fine-Tuning (SFT)",
     ],
-    networking: [
-      "Switches and Routers - Cisco, Mikrotik, BDCom",
-      "Firewall - Fortinet",
-    ],
-    imaging: [
-      "EarthImager 2D/3D",
-      "SuperSting R8 Electrical Resistivity Meter",
-    ],
-    spatial: ["Google Earth Engine", "Arc-GIS", "Google Earth Pro"],
-    other: [
-      "Windows Server 19",
-      "Web Development",
-      "MySQL",
-      "Git",
-      "Adobe Creative Cloud",
-      "MS Office 365",
-    ],
+    dataScience: ["Pandas", "NumPy", "Power BI", "Matplotlib", "Seaborn", "Minitab"],
+    other: ["Postman", "Figma", "Git / GitHub", "LaTeX"],
   },
   experience: [
     {
       role: "Graduate Research Assistant",
       company: "Prairie View A&M University",
-      period: "Feb. 2026 - Present",
+      period: "Aug. 2024 - Present",
       points: [
-        "Developing a hierarchical multi-source data fusion pipeline that co-registers ERI, ground RGB camera images, UAV orthomosaics, and satellite imagery.",
-        "Building Python/Google Colab workflows using OpenCV, Pandas, and Matplotlib to stitch high-resolution RGB mosaics and align pixel-based optical indices.",
-        "Developing and validating an automated classification model that fuses VARI-based vegetation and brightness metrics with ERI-derived resistivity.",
+        "Analyzed and audited 10,000 police crash narratives, consolidating 72 original contributing-factor codes into an 8-class taxonomy and supporting a three-layer human-in-the-loop framework using the custom LACE tool.",
+        "Developed NLP pipelines using FastText embeddings and a TextCNN model, achieving approximately 72% accuracy and showing that direct multi-label classification outperformed hierarchical architectures on this dataset.",
+        "Performed annotation-quality analysis that achieved near-perfect post-adjudication agreement (Cohen's kappa = 0.990) and identified uncertainty as a signal for targeted expert review.",
+        "Engineered and deployed a prototype crash-analysis system integrating small language models, Figma, and Postman, demonstrating full-pipeline execution from data processing to deployment.",
       ],
     },
     {
-      role: "Graduate Engineering Student Worker",
-      company: "Texas A&M Transportation Institute",
-      period: "Jun. 2024 - Dec. 2025",
+      role: "Product Management Executive",
+      company: "Barikoi Technologies Limited",
+      period: "Mar. 2024 - Jun. 2024",
       points: [
-        "Engineered significant enhancements for the Texas A&M Transportation Institute's (TTI) Border Wait Times system.",
-        "Re-engineered a high-throughput Python UDP data ingestion backend, optimizing PostgreSQL performance using connection pooling and bulk inserts.",
-        "Developed advanced Bluetooth signal processing techniques (RSSI filters, median/EMA smoothing, hysteresis logic) to stabilize device detection.",
-        "Designed a low-latency UDP fan-out service for real-time data mirroring and analytics.",
+        "Collaborated with product and technical teams to translate product needs and feedback into improvement priorities, supporting iterative refinement of technology products.",
+        "Worked across business and engineering stakeholders, strengthening requirements communication, issue tracking, and product-focused problem solving.",
       ],
     },
     {
-      role: "Graduate Research Assistant",
-      company: "Prairie View A&M University",
-      period: "Jan. 2024 - May 2025",
+      role: "Research Assistant",
+      company: "Ahsanullah University of Science & Technology",
+      period: "Dec. 2021 - Feb. 2022",
       points: [
-        "Spearheaded a groundbreaking IoT research project based on IoT data and web development at the nexus of Computer Science and Civil departments.",
-        "Leveraged innovative methodologies resulting in a 30% reduction in soil embankment maintenance costs.",
+        "Supported experimental research, data analysis, laboratory operations, and student mentoring for predictive modeling and engineering optimization work.",
+        "Applied response surface methodology, artificial neural networks, genetic algorithms, and particle swarm optimization to manufacturing-process prediction and optimization research.",
       ],
     },
-    {
-      role: "System Engineer",
-      company: "Fakir Knitwears Limited, Dhaka",
-      period: "Jan. 2021 - Dec. 2023",
-      points: [
-        "Configured, managed, and monitored diverse IT systems and infrastructure, ensuring optimal production alignment.",
-        "Specialized in networking, worked on several IoT projects, and configured switches, routers, and firewall profiles.",
-      ],
-    },
-    {
-      role: "IT Executive",
-      company: "Ecomclips, Dhaka",
-      period: "Feb. 2020 - Dec. 2020",
-      points: [
-        "Managed a process re-engineering project (Pay Per Click) to improve and consolidate end-to-end service processes.",
-        "Restructured communication flow among 5 departments and cut down paperwork by 75%.",
-      ],
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Samsung R&D Institute Limited, Dhaka",
-      period: "Sep. 2019 - Dec. 2019",
-      points: [
-        "Analyzed and resolved 50+ complex coding challenges using C and C++, contributing to a cleaner codebase.",
-        "Decreased debugging time by 10 hours monthly, accelerating project timelines.",
-      ],
-    },
+  ],
+  researchInterests: [
+    { title: "Reliable and Trustworthy AI", description: "Auditable, human-centered AI for consequential decisions." },
+    { title: "Natural Language Processing", description: "Domain adaptation, multi-label learning, and efficient fine-tuning." },
+    { title: "Transportation Safety Analytics", description: "Turning crash narratives into actionable safety evidence." },
+    { title: "Healthcare AI", description: "Interpretable vision and structured clinical documentation support." },
   ],
   projects: [
-    // Add your projects here
-    // { title: "Portfolio V2", description: "My Next.js portfolio", tags: ["Next.js"] }
+    {
+      title: "Crash Narrative Analysis and Analyst Review",
+      subtitle: "Transportation NLP · Human-in-the-Loop · Deployment",
+      description:
+        "An end-to-end research program for classifying contributing factors in police crash narratives, auditing annotation quality, and delivering calibrated model suggestions through an analyst-facing review workflow.",
+      tags: ["Domain-adapted NLP", "Multi-label Classification", "FastText", "TextCNN", "Small Language Models"],
+      videoUrl: "https://drive.google.com/file/d/1gTtmvJE8exkrUC4wo8LNqSLNB2Nc1VmQ/preview",
+      videoExternalUrl: "https://drive.google.com/file/d/1gTtmvJE8exkrUC4wo8LNqSLNB2Nc1VmQ/view",
+    },
+    {
+      title: "Automated Clinical SOAP Note Generation System",
+      subtitle: "Healthcare NLP · Small Language Models · QLoRA · SFT",
+      description:
+        "Developing a healthcare NLP system that uses small language models to generate structured clinical SOAP notes. Applying QLoRA and supervised fine-tuning to adapt the model efficiently for domain-specific medical documentation.",
+      tags: ["Healthcare NLP", "QLoRA", "Supervised Fine-Tuning", "Small Language Models"],
+    },
+    {
+      title: "Skin Lesion Classification with Concept Bottleneck Models",
+      subtitle: "Computer Vision · Interpretable Medical AI",
+      description:
+        "Developed a dermoscopic image-classification pipeline using EfficientNet-B4 and Concept Bottleneck Models, demonstrating experience in computer vision, transfer learning, model interpretability, and medical-image analysis.",
+      tags: ["Computer Vision", "EfficientNet-B4", "Concept Bottleneck Models", "Transfer Learning"],
+    },
   ],
-  achievements: [
-    { text: "Citations on Google Scholar: 100+" },
+  publications: [
     {
-      text: "TRB 2026: Podium presentation accepted ('An Internet of Things-Driven Machine Learning Framework for Slope Movement Detection')",
-      url: "https://annualmeeting.mytrb.org/OnlineProgram/Details/24797",
-    },
-    { text: "Lean Six Sigma - Yellow Belt" },
-    {
-      text: "TRB 2025: Podium presentation on early warning systems for landslides",
-      url: "https://rip.trb.org/View/2244371",
+      title: "Domain Adapted NLP for Multi-Label Crash Narrative Classification under Extreme Class Imbalance",
+      authors: "Md Sajjad Hossain et al.",
+      venue: "The International FLAIRS Conference Proceedings",
+      year: "2026",
+      url: "https://doi.org/10.32473/flairs.39.1.141831",
     },
     {
-      text: "Received two promotions in 2022 and 2023 at Fakir Knitwears Limited.",
+      title: "When Ground Truth Disagrees: A Human-in-the-Loop Audit of Annotation Errors in High-Stakes Crash Narratives",
+      authors: "Md Sajjad Hossain et al.",
+      venue: "The 20th Linguistic Annotation Workshop (LAW XX), ACL",
+      year: "2026",
+      url: "https://doi.org/10.18653/v1/2026.law-main.18",
     },
     {
-      text: "Passed advanced software certification test from Samsung R&D Institute in January 2020.",
+      title: "Predictive Modeling and Optimization of Surface Roughness and Cutting Zone Temperature in Turning of Hardened Steel Using RSM, ANN, Genetic Algorithm, and Particle Swarm Optimization",
+      authors: "Md Sajjad Hossain et al.",
+      venue: "Research and Applications of Thermal Engineering",
+      year: "2023",
+      url: "https://www.researchgate.net/publication/376166558_Predictive_Modeling_and_Optimization_of_Surface_Roughness_and_Cutting_Zone_Temperature_in_Turning_of_Hardened_Steel_Using_RSM_ANN_Genetic_Algorithm_and_Particle_Swarm_Optimization",
     },
   ],
+  underReview: {
+    title: "From Crash Narratives to Analyst Review: Identifying Additional Contributing Factors Under Precision and Workload Constraints",
+    authors: "Md Sajjad Hossain et al.",
+    venue: "Submitted to the Transportation Research Board (TRB) 2027 Annual Meeting - Under Review",
+    year: "2027",
+    url: "#publications",
+  },
 };

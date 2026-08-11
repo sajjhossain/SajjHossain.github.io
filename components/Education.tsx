@@ -32,15 +32,7 @@ export default function Education() {
                 <span className="text-sm font-mono bg-gray-100 dark:bg-zinc-800 px-3 py-1 rounded-full">{edu.period}</span>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">{edu.details}</p>
-              
-              {edu.reportUrl && (
-                <div className="mb-6">
-                  <a href={edu.reportUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors bg-blue-50 dark:bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-100 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-800">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    View Project Report
-                  </a>
-                </div>
-              )}
+              <p className="text-sm font-bold text-[#163963] dark:text-blue-300 mb-6">GPA: {edu.cgpa}</p>
               
               {edu.courses && (
                 <div className="mt-auto">

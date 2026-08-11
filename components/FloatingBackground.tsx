@@ -32,7 +32,7 @@ export default function FloatingBackground() {
           scale: [1, 1.05, 1],
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[40%] right-[40%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen"
+        className="absolute top-[40%] right-[40%] w-[400px] h-[400px] bg-amber-400/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen"
       />
     </div>
   );

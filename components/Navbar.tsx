@@ -22,8 +22,9 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
+    { name: "Research", href: "#projects" },
+    { name: "Publications", href: "#publications" },
     { name: "Education", href: "#education" },
-    { name: "Achievements", href: "#achievements" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -46,11 +47,11 @@ export default function Navbar() {
           }}
           className="text-xl font-bold tracking-tight relative z-50 cursor-pointer"
         >
-          {resumeData.name.split(" ")[0]}<span className="text-blue-500">.</span>
+          {resumeData.name.split(" ")[1]}<span className="text-[#188b89]">.</span>
         </button>
         
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}

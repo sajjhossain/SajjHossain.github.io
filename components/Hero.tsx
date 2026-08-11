@@ -40,7 +40,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-blue-500 font-medium tracking-wide mb-4"
             >
-              Hi, my name is
+              M.S. Computer Science · Prairie View A&amp;M University
             </motion.p>
             
             <motion.h1
@@ -71,23 +71,12 @@ export default function Hero() {
               {resumeData.role}
             </motion.h2>
 
-            <div className="mb-12 flex flex-wrap">
-              {`${resumeData.summary.split('.')[0]}. ${resumeData.summary.split('.')[1]}.`.split(" ").map((word, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, y: 15, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  whileHover={{ scale: 1.05, color: "#3b82f6", y: -2 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.5 + i * 0.02,
-                  }}
-                  className="inline-block text-lg text-gray-600 dark:text-gray-300 mr-[0.3em] leading-relaxed cursor-default transition-colors"
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </div>
+            <motion.p
+              variants={itemVariants}
+              className="mb-12 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              {resumeData.summary}
+            </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
               <a
@@ -113,7 +102,7 @@ export default function Hero() {
             className="w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] relative flex-shrink-0"
           >
             <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl animate-floating-subtle z-0 mix-blend-multiply dark:mix-blend-screen hidden md:block" />
-            <div className="relative w-full h-full rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl overflow-hidden z-10 animate-floating">
+            <div className="relative w-full h-full rounded-full border-4 border-white dark:border-zinc-800 shadow-2xl overflow-hidden z-10 animate-floating bg-gradient-to-br from-[#163963] via-[#2878b8] to-[#188b89]">
               <Image 
                 src={resumeData.profileImage} 
                 alt={`${resumeData.name} Portrait`}

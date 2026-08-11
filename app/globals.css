@@ -3,6 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --color-blue-500: #2878b8;
+  --color-blue-600: #163963;
+  --color-emerald-500: #188b89;
+  --color-amber-400: #d99b32;
   --animate-floating: anti-gravity 4s ease-in-out infinite;
   --animate-floating-subtle: anti-gravity-subtle 6s ease-in-out infinite;
 

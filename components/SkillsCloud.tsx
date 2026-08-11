@@ -6,10 +6,9 @@ import { resumeData } from "@/lib/data";
 export default function SkillsCloud() {
   const allSkills = [
     ...resumeData.skills.languages,
-    ...resumeData.skills.machineLearning,
     ...resumeData.skills.frameworks,
-    ...resumeData.skills.spatial,
-    ...resumeData.skills.networking,
+    ...resumeData.skills.machineLearning,
+    ...resumeData.skills.dataScience,
     ...resumeData.skills.other,
   ];
 
