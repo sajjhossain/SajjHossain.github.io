@@ -74,7 +74,7 @@ export interface ResumeData {
 export const resumeData: ResumeData = {
   name: "MD SAJJAD HOSSAIN",
   role: "I develop reliable AI and NLP methods for high-stakes systems.",
-  profileImage: "/images/profile-placeholder.svg",
+  profileImage: "/images/profile.jpg",
   resumeUrl: "/resume.pdf",
   contact: {
     location: "Houston, Texas, USA",
