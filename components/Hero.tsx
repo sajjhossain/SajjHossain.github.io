@@ -44,7 +44,7 @@ export default function Hero() {
             </motion.p>
             
             <motion.h1
-              className="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-gray-900 dark:text-gray-100 flex flex-wrap gap-x-3"
+              className="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-gray-900 dark:text-gray-100 flex flex-wrap gap-x-3"
             >
               {resumeData.name.split(" ").map((word, index) => (
                 <motion.span
@@ -66,14 +66,14 @@ export default function Hero() {
             
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-500 dark:text-gray-400 tracking-tight mb-8"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-500 dark:text-gray-400 tracking-tight mb-8"
             >
               {resumeData.role}
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
-              className="mb-12 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+              className="mb-12 text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-justify"
             >
               {resumeData.summary}
             </motion.p>
