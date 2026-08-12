@@ -61,14 +61,9 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a
-            href={resumeData.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
-          >
-            Resume
-          </a>
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">
+  CV available upon request
+</span>
           <ThemeToggle />
         </nav>
 
@@ -115,14 +110,9 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <a
-                href={resumeData.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 px-8 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full font-bold shadow-lg"
-              >
-                Resume
-              </a>
+              <span className="mt-4 text-lg font-medium text-gray-600 dark:text-gray-400">
+  CV available upon request
+</span>
             </motion.div>
           )}
         </AnimatePresence>
