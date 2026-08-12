@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -34,6 +35,19 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col selection:bg-blue-500/30 text-[#17233a] bg-white dark:bg-[#0a0a0a] dark:text-gray-100">
+        <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-BY3C7WG5MR"
+    strategy="afterInteractive"
+  />
+
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BY3C7WG5MR');
+    `}
+  </Script>
         <ThemeProvider>
           <CustomCursor />
           <FloatingBackground />
