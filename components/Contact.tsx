@@ -20,7 +20,7 @@ export default function Contact() {
             Get In Touch<span className="text-blue-500">.</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-12 font-medium">
-            I welcome conversations about PhD opportunities and collaborations in reliable AI, NLP, transportation safety, and healthcare.
+            I’m interested in opportunities to advance and apply NLP, computer vision, machine learning, data-centric AI, and human-in-the-loop methods to challenging real-world problems
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
